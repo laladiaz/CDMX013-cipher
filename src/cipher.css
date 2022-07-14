@@ -1,0 +1,96 @@
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* formato de toda la pagina html */
+html {
+  background: #EFE9E7;
+  padding: 1px 1px;
+  margin: auto;
+}
+/*en la etiqueta header esta incluido el titulo y el logo */
+header {
+    text-align: justify;
+    padding:2rem 0 2rem 0;
+    display: flex;
+}
+.brand {
+    text-align: center;
+}
+.name {
+    color: goldenrod;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 24px;
+}
+.cipher-title {
+    color: #C6757D;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 36px ;
+    margin-left: 25%;
+    padding: 4rem;
+}
+
+/*Estilo del cuerpo de la pagina*/
+
+.offset-lable {
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+color: #dc5765;
+}
+#offset-encrypt {
+
+}
+#offset-sent {
+
+}
+#msg-input {
+
+}
+#encrypted {
+
+}
+
+/*Estilo del pie de pagina*/
+
+footer {
+    background-color: #0A1045;
+    padding:2rem 0 2rem 0;
+}
+.footer{
+    width: 80%;
+    height: 10vh;
+    background-color: #0A1045;
+    color: #EFE9E7;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+.copy {
+    display: flex;
+    flex-direction: column;
+    margin-right: 4rem;
+
+}
+.copy a, .footer-nav a {
+    color: #EFE9E7;
+    text-decoration: none;
+}
+.copyright {
+    margin-top: 2.5rem;
+}
+.footer-nav {
+
+}
+.footer-nav li{
+    list-style: none;
+}
+.footer-nav h4{
+    margin-bottom: 0.5rem;
+}
+.footer-nav a:hover, .copy a:hover {
+color: rgb(187, 108, 215);
+transition: 0.3s easy-out;
+}
