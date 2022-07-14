@@ -15,6 +15,11 @@ header {
     text-align: center;
     padding: 10px 5%;
 }
+.name {
+    color: goldenrod;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 56px;
+}
 
 /*welcome y los botones estan incluidos en la etiqueta main*/
 
@@ -22,6 +27,7 @@ header {
 font-family: Arial, Helvetica, sans-serif;
 text-align: justify;
 font-size: 12px;
+padding-left: 15%;
 
 }
 
