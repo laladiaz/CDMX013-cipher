@@ -14,36 +14,40 @@ html {
 /*en la etiqueta header esta incluido el titulo y el logo */
 header {
     text-align: justify;
-    padding:2rem 0 2rem 0;
+    padding:1rem 0 2rem 0;
     display: flex;
 }
 .brand {
     text-align: center;
+    margin-left: 4rem;
 }
 .name {
     color: goldenrod;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 24px;
+    font-size: 30px;
 }
 .cipher-title {
     color: #C6757D;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 36px ;
-    margin-left: 25%;
+    margin-left: 20%;
     padding: 4rem;
 }
 
 /*Estilo del cuerpo de la pagina*/
 .return {
-    margin-left: 75%;
+    margin-left: 80%;
 }
 .offset-field{
     padding: 2rem;
 }
-.offset-label {
+.offset-label, .cipher-inst {
     color: #a42532;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin-bottom: 1rem;
+}
+.cipher-inst {
+    margin-left: 5rem;
 }
 .fields {
     text-align: center;
@@ -51,26 +55,26 @@ header {
 #offset-encrypt, #offset-sent {
     display: inline-block;
 }
+
 #offset-encrypt {
 width: 65px;
 height: 25px;
 border-radius: 4px;
 border: 1px solid #0A1045;
 padding-left: 0.5rem;   
-
-}
-.return, #offsent-sent {
-    background-color: #0A1045;
 }
 
 #msg-input, #encrypted {
+    display: inline-block;
     border: 2px solid #C6757D;
     border-radius: 4px;
+    width: 35rem;
+    height: 20rem;
 }
 #encrypted {
 background-color: #C6757D;
 }
-.return, #offset-sent, .send {
+.return, #offset-sent {
     width: 100px;
     height: 40px;
     border-radius: 6px;
@@ -79,8 +83,30 @@ background-color: #C6757D;
     text-align: center;
     text-decoration: none;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-
+    background-color: #0A1045;
 }
+.return:hover, #offset-sent:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.532), 0 17px 50px 0 rgba(0, 0, 0, 0.301);
+    transition-duration: 0.4ms;
+}
+.send {
+    width: 100px;
+    height: 40px;
+    border-radius: 6px;
+    color: #EFE9E7;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #C6757D;
+    margin: 2rem 45%;
+}
+.send:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.532), 0 17px 50px 0 rgba(0, 0, 0, 0.301);
+    transition-duration: 0.4ms;
+}
+
+
 
 /*hover {
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.532), 0 17px 50px 0 rgba(0, 0, 0, 0.301);
