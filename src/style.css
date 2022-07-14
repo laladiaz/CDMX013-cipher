@@ -43,11 +43,13 @@ padding-left: 15%;
     display: block;
     font-size: 16px;
     border-radius: 8px;
-    transition-duration: 0.4ms;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
 }
 
 #cipher:hover, #decipher:hover {
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.532), 0 17px 50px 0 rgba(0, 0, 0, 0.301);
+    transition-duration: 0.4ms;
 }
 #cipher {
     background-color: #C6757D; /* rose */
