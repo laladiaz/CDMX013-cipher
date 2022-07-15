@@ -31,7 +31,6 @@ header {
     margin-left: 20%;
     padding: 4rem;
 }
-
 /*Estilo del cuerpo de la pagina*/
 .return {
     margin-left: 80%;
@@ -53,7 +52,6 @@ header {
 #offset-encrypt, #offset-sent {
     display: inline-block;
 }
-
 #offset-encrypt {
 width: 65px;
 height: 25px;
@@ -61,7 +59,6 @@ border-radius: 4px;
 border: 1px solid #0A1045;
 padding-left: 0.5rem;   
 }
-
 #msg-input, #encrypted {
     display: inline-block;
     border: 2px solid #C6757D;
@@ -103,17 +100,12 @@ background-color: #C6757D;
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.532), 0 17px 50px 0 rgba(0, 0, 0, 0.301);
     transition-duration: 0.4ms;
 }
-
-
-
 /*hover {
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.532), 0 17px 50px 0 rgba(0, 0, 0, 0.301);
     transition-duration: 0.4ms;
 }
 */
-
 /*Estilo del pie de pagina*/
-
 footer {
     background-color: #0A1045;
     padding:2rem 0 2rem 0;
@@ -140,9 +132,6 @@ footer {
 }
 .copyright {
     margin-top: 2.5rem;
-}
-.footer-nav {
-
 }
 .footer-nav li{
     list-style: none;
