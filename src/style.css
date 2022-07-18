@@ -95,3 +95,7 @@ footer {
 color: rgb(187, 108, 215);
 transition: 0.3s easy-out;
 }
+
+h1{
+    font-size: 6rem;
+}
