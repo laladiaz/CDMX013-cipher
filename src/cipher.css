@@ -116,7 +116,7 @@ footer {
     background-color: #0A1045;
     color: #EFE9E7;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
     margin: 0 auto;
 }
