@@ -37,8 +37,8 @@ cipherButton.addEventListener("click", function() {
     encryptFields.append(msgInput, msgEncrypted);
     //boton para enviaer le mensaje a cifrar
     const sendButton = document.createElement("button");
-    sendButton.setAttribute("class", "send");
-    sendButton.setAttribute("id", "send");
+    sendButton.setAttribute("class", "sendCipher");
+    sendButton.setAttribute("id", "sendCipher");
     sendButton.textContent = "HAZ CLICK PARA CIFRAR"
     
     
@@ -77,8 +77,8 @@ decipherButton.addEventListener("click", function() {
     encryptFields.append(msgInput, msgEncrypted);
     //boton para enviaer le mensaje a decifrar
     const sendButton = document.createElement("button");
-    sendButton.setAttribute("class", "send");
-    sendButton.setAttribute("id", "send");
+    sendButton.setAttribute("class", "sendDecipher");
+    sendButton.setAttribute("id", "sendDecipher");
     sendButton.textContent = "HAZ CLICK PARA DECIFRAR"
     
     
