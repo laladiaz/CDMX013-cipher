@@ -20,7 +20,8 @@ header {
     font-size: 56px;
 }
 
-/*welcome y los botones estan incluidos en la etiqueta main*/
+/*Aqui esta el formato de welcome y los botones estan incluidos en la etiqueta main
+que se ejecuta antes de comenzar a usar las funcionalidades*/
 
 #welcome {
 font-family: Arial, Helvetica, sans-serif;
@@ -95,7 +96,73 @@ footer {
 color: rgb(187, 108, 215);
 transition: 0.3s easy-out;
 }
-
-h1{
-    font-size: 6rem;
+/*Estilo de main cuando se activa cipherButton*/
+.offset-field{
+    padding: 2rem;
+}
+.fields {
+    text-align: center;
+}
+#offset-encrypt {
+    display: inline-block;
+    width: 65px;
+    height: 25px;
+    border-radius: 4px;
+    border: 1px solid #0A1045;
+    padding-left: 0.5rem;   
+}
+#msg-input, #encrypted {
+    display: inline-block;
+    border: 2px solid #C6757D;
+    border-radius: 4px;
+    width: 35rem;
+    height: 20rem;
+}
+#encrypted {
+background-color: #C6757D;
+margin-left: 1rem;
+}
+.send {
+    width: 150px;
+    height: 70px;
+    border-radius: 6px;
+    color: #EFE9E7;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #C6757D;
+    margin: 2rem 45%;
+}
+.send:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.532), 0 17px 50px 0 rgba(0, 0, 0, 0.301);
+    transition-duration: 0.4ms;
+}
+/*Estilo de main cuando se activa decipherButton*/
+#msg-code, #decoded {
+    display: inline-block;
+    border: 2px solid #739E82;
+    border-radius: 4px;
+    width: 35rem;
+    height: 20rem;
+}
+#decoded {
+background-color: #739E82;
+margin-left: 1rem;
+}
+.send {
+    width: 200px;
+    height: 70px;
+    border-radius: 6px;
+    color: #EFE9E7;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #739E82;
+    margin: 2rem 45%;
+}
+.send:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.532), 0 17px 50px 0 rgba(0, 0, 0, 0.301);
+    transition-duration: 0.4ms;
 }
