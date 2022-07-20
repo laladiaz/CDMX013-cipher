@@ -17,7 +17,7 @@ cipherButton.addEventListener("click", function() {
    //el campo offset es un input type number
     const offset = document.createElement("input");
     offset.setAttribute("type", "number")
-    offset.setAttribute("placeholder", "offset")
+    offset.setAttribute("placeholder", "clave")
     offset.setAttribute("id", "offset-encrypt");
     
     offsetField.append(offsetLabel, offset)
@@ -57,7 +57,7 @@ decipherButton.addEventListener("click", function() {
    //el campo offset es un input type number
     const offset = document.createElement("input");
     offset.setAttribute("type", "number")
-    offset.setAttribute("placeholder", "offset")
+    offset.setAttribute("placeholder", "clave")
     offset.setAttribute("id", "offset-encrypt");
     
     offsetField.append(offsetLabel, offset)
