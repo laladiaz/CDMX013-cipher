@@ -7,6 +7,10 @@ const cipherButton = document.getElementById("cipherButton");
 const decipherButton = document.getElementById("decipherButton");
 // creo campos y botones necesarios para la UX
 //CIFRAR
+const cipherForm = document.createElement("form")
+cipherForm.setAttribute("id","cipherForm")
+cipherForm.setAttribute("autocomplete", "off")
+
 //div de offset para cifrar y su etiqueta
 const offsetFieldCipher = document.createElement("div");
 offsetFieldCipher.setAttribute("class", "offset-field")
@@ -36,9 +40,12 @@ encryptFieldsCipher.append(msgInputCipher, msgEncrypted);
 
 //boton para enviaer le mensaje a cifrar
 const cipherSendButton = document.createElement("button");
+cipherSendButton.setAttribute("type", "submit");
 cipherSendButton.setAttribute("class", "sendCipher");
 cipherSendButton.setAttribute("id", "sendCipher");
 cipherSendButton.textContent = "HAZ CLICK PARA CIFRAR";
+
+cipherForm.append(offsetFieldCipher, encryptFieldsCipher, cipherSendButton);
 
 //DESCIFRAR
 //div de offset para descifrar y su etiqueta
@@ -76,7 +83,7 @@ decipherSendButton.textContent = "HAZ CLICK PARA DECIFRAR"
 /*Aqui creamos un click listener para el boton de cifrar y adentro de la funcion que se va a 
 ejecutar al click colocamos todos los campos y botones para el cifrado*/
 cipherButton.addEventListener("click", function () {
-    buttons.append(offsetFieldCipher, encryptFieldsCipher, cipherSendButton);
+    buttons.append(cipherForm);
 });
 
 
