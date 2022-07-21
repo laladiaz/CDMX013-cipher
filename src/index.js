@@ -48,6 +48,10 @@ cipherSendButton.textContent = "HAZ CLICK PARA CIFRAR";
 cipherForm.append(offsetFieldCipher, encryptFieldsCipher, cipherSendButton);
 
 //DESCIFRAR
+
+const decodeForm = document.createElement("form")
+decodeForm.setAttribute("id","cipherForm")
+decodeForm.setAttribute("autocomplete", "off")
 //div de offset para descifrar y su etiqueta
 const offsetFieldDecode = document.createElement("div");
 offsetFieldDecode.setAttribute("class", 'offset-field')
@@ -80,6 +84,8 @@ decipherSendButton.setAttribute("class", "sendDecipher");
 decipherSendButton.setAttribute("id", "sendDecipher");
 decipherSendButton.textContent = "HAZ CLICK PARA DECIFRAR"
 
+decodeForm.append(offsetFieldDecode, encryptFieldsDecode, decipherSendButton)
+
 /*Aqui creamos un click listener para el boton de cifrar y adentro de la funcion que se va a 
 ejecutar al click colocamos todos los campos y botones para el cifrado*/
 cipherButton.addEventListener("click", function () {
@@ -90,17 +96,12 @@ cipherButton.addEventListener("click", function () {
 /*Aqui creamos un click listener para decifrar y adentro de la funcion que se va a ejecutar al click
 colocamos todos los campos y botones para el decifrado*/
 decipherButton.addEventListener("click", function () {
-    buttons.append(offsetFieldDecode, encryptFieldsDecode, decipherSendButton);
+    buttons.append(decodeForm);
 });
 
 //Todo este fragmento es para la funcionalidad de cifrar
 //click listener para capturar str y offset
-cipherSendButton.addEventListener("click", function () {
-    let strC = document.getElementById("msgInput").value;
-    //return strC;
-    console.log(strC);
-});
-cipherSendButton.addEventListener("click", function() {
-    let offsetC = document.getElementById("offset-encrypt").value;
-    console.log(offset);
-});
+//cipherSendButton.addEventListener("click", encodeMessage());
+//cipherSendButton.addEventListener("click", decodeMessage());
+
+
