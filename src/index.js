@@ -76,4 +76,5 @@ decipherButton.addEventListener("click", function () {
 });
 
 //Todo este fragmento es para la funcionalidad de cifrar
-
+let str = msgInputCipher.value;
+console.log(str);
