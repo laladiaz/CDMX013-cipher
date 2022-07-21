@@ -1,96 +1,79 @@
 import cipher from './cipher.js';
 // todo este fragmento es para agregar al DOM textareas y buttons para cifrar y descifar
-/*defino las constantes para el area de botones y cada boton y este espacio lo voy a modificar
-para que cifre y decifre en una sola pagina*/
+// defino las constantes para el area de botones y los botones de cifrar y descifrar 
+
 const buttons = document.getElementById("buttons");
 const cipherButton = document.getElementById("cipherButton");
 const decipherButton = document.getElementById("decipherButton");
+// creo campos y botones necesarios para la UX
+//CIFRAR
+//div de offset para cifrar y su etiqueta
+const offsetFieldCipher = document.createElement("div");
+offsetFieldCipher.setAttribute("class", "offset-field")
+const offsetLabelCipher = document.createElement("p");
+offsetLabelCipher.textContent = "FIJA UN VALOR PARA EL CIFRADO";
+//el campo offset para cifrar es un input type number
+const offsetCipher = document.createElement("input");
+offsetCipher.setAttribute("type", "number")
+offsetCipher.setAttribute("placeholder", "clave")
+offsetCipher.setAttribute("id", "offset-encrypt");
 
-/*Aqui creamos un click listener para cifrar y adentro de la funcion que se va a ejecutar al click
-colocamos todos los campos y botones para el cifrado*/
-cipherButton.addEventListener("click", function() {
-    //div de offset y su etiqueta
-    const offsetField = document.createElement("div");
-    offsetField.setAttribute("class", "offset-field")
-    const offsetLabel = document.createElement("p");
-    offsetLabel.textContent = "FIJA UN VALOR PARA EL CIFRADO";
-   //el campo offset es un input type number
-    const offset = document.createElement("input");
-    offset.setAttribute("type", "number")
-    offset.setAttribute("placeholder", "clave")
-    offset.setAttribute("id", "offset-encrypt");
-    
-    offsetField.append(offsetLabel, offset)
-    //deberia pornerle un botn de submit?
-   //div de fields que contiene los textarea para introducir el mensaje y para leerlo
-    const encryptFields = document.createElement("div");
-    encryptFields.setAttribute("class", "fields");
-    //textarea para introducir el mensaje
-    const msgInput = document.createElement("textarea");
-    msgInput.setAttribute("id", "msg-input");
-    msgInput.setAttribute("placeholder", "ESCRIBE TU MENSAJE EN MAYUSCULAS SIN USAR CARACTERES ESPECIALES");
-    //textarea para leer unicamente
-    const msgEncrypted = document.createElement("textarea");
-    msgEncrypted.setAttribute("id", "encrypted");
-    msgEncrypted.setAttribute("readonly", "");
-    
-    encryptFields.append(msgInput, msgEncrypted);
-    //boton para enviaer le mensaje a cifrar
-    const cipherSendButton = document.createElement("button");
-    cipherSendButton.setAttribute("class", "sendCipher");
-    cipherSendButton.setAttribute("id", "sendCipher");
-    cipherSendButton.textContent = "HAZ CLICK PARA CIFRAR"
-    
-    
-    buttons.append(offsetField, encryptFields, cipherSendButton);
+offsetFieldCipher.append(offsetLabelCipher, offsetCipher)
 
+//div de fields que contiene los textarea necesarios para el cifrado para introducir el mensaje y para leerlo
+const encryptFieldsCipher = document.createElement("div");
+encryptFieldsCipher.setAttribute("class", "fields");
+//textarea para introducir el mensaje a cifrar
+const msgInputCipher = document.createElement("textarea");
+msgInputCipher.setAttribute("id", "msgInput");
+msgInputCipher.setAttribute("placeholder", "ESCRIBE TU MENSAJE EN MAYUSCULAS SIN USAR CARACTERES ESPECIALES");
+//textarea para leer unicamente el mensaje cifrado
+const msgEncrypted = document.createElement("textarea");
+msgEncrypted.setAttribute("id", "encrypted");
+msgEncrypted.setAttribute("readonly", "");
+
+encryptFieldsCipher.append(msgInputCipher, msgEncrypted);
+
+//DESCIFRAR
+//div de offset para descifrar y su etiqueta
+const offsetFieldDecode = document.createElement("div");
+offsetFieldDecode.setAttribute("class", 'offset-field')
+const offsetLabelDecode = document.createElement("p");
+offsetLabelDecode.textContent = "FIJA UN VALOR PARA EL CIFRADO";
+//el campo offset para descifrar es un input type number
+const offsetDecode = document.createElement("input");
+offsetDecode.setAttribute("type", "number")
+offsetDecode.setAttribute("placeholder", "clave")
+offsetDecode.setAttribute("id", "offset-decode");
+
+offsetFieldDecode.append(offsetLabelDecode, offsetDecode)
+
+//div de fields que contiene los textarea necesarios para descifrar para introducir el mensaje y para leerlo
+const encryptFieldsDecode = document.createElement("div");
+encryptFieldsDecode.setAttribute("class", "fields");
+//textarea para introducir el mensaje a descifrar
+const msgInputDecode = document.createElement("textarea");
+msgInputDecode.setAttribute("id", "msgCode");
+msgInputDecode.setAttribute("placeholder", "ESCRIBE TU MENSAJE EN MAYUSCULAS SIN USAR CARACTERES ESPECIALES");
+//textarea para leer unicamente el mensaje descifrardo
+const msgDecoded = document.createElement("textarea");
+msgDecoded.setAttribute("id", "decoded");
+msgDecoded.setAttribute("readonly", "");
+
+encryptFieldsDecode.append(msgInputDecode, msgDecoded);
+
+/*Aqui creamos un click listener para el boton de cifrar y adentro de la funcion que se va a 
+ejecutar al click colocamos todos los campos y botones para el cifrado*/
+cipherButton.addEventListener("click", function () {
+    buttons.append(offsetFieldCipher, encryptFieldsCipher);
 });
+
 
 /*Aqui creamos un click listener para decifrar y adentro de la funcion que se va a ejecutar al click
 colocamos todos los campos y botones para el decifrado*/
-decipherButton.addEventListener("click", function() {
-    //div de offset y su etiqueta
-    const offsetField = document.createElement("div");
-    offsetField.setAttribute("class", 'offset-field')
-    const offsetLabel = document.createElement("p");
-    offsetLabel.textContent = "FIJA UN VALOR PARA EL CIFRADO";
-   //el campo offset es un input type number
-    const offset = document.createElement("input");
-    offset.setAttribute("type", "number")
-    offset.setAttribute("placeholder", "clave")
-    offset.setAttribute("id", "offset-decode");
-    
-    offsetField.append(offsetLabel, offset)
-    //deberia pornerle un botn de submit?
-   //div de fields que contiene los textarea para introducir el mensaje y para leerlo
-    const encryptFields = document.createElement("div");
-    encryptFields.setAttribute("class", "fields");
-    //textarea para introducir el mensaje a decifrar
-    const msgInput = document.createElement("textarea");
-    msgInput.setAttribute("id", "msg-code");
-    msgInput.setAttribute("placeholder", "ESCRIBE TU MENSAJE EN MAYUSCULAS SIN USAR CARACTERES ESPECIALES");
-    //textarea para leer unicamente
-    const msgEncrypted = document.createElement("textarea");
-    msgEncrypted.setAttribute("id", "decoded");
-    msgEncrypted.setAttribute("readonly", "");
-    
-    encryptFields.append(msgInput, msgEncrypted);
-    //boton para enviaer le mensaje a decifrar
-    const decipherSendButton = document.createElement("button");
-    decipherSendButton.setAttribute("class", "sendDecipher");
-    decipherSendButton.setAttribute("id", "sendDecipher");
-    decipherSendButton.textContent = "HAZ CLICK PARA DECIFRAR"
-    
-    
-    buttons.append(offsetField, encryptFields, decipherSendButton);
+decipherButton.addEventListener("click", function () {
+    buttons.append(offsetFieldDecode, encryptFieldsDecode);
+});
 
-});
 //Todo este fragmento es para la funcionalidad de cifrar
-//click listener para capturar str y offset
-const encodeButton = document.getElementById("sendCipher");
-encodeButton.addEventListener("click", function() {
-    let str = document.getElementById("msg-input").value;
-    let offset = document.getElementById("offset-encrypt").value;
-    console.log (str);
-    console.log (offset);
-});
+
