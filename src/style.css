@@ -98,7 +98,7 @@ transition: 0.3s easy-out;
 .fields {
     text-align: center;
 }
-#offset-encrypt {
+#offset-encrypt, #offset-decode {
     display: inline-block;
     width: 65px;
     height: 25px;

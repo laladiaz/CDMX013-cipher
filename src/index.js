@@ -1,17 +1,17 @@
 import cipher from './cipher.js';
-
+// todo este fragmento es para agregar al DOM textareas y buttons para cifrar y descifar
 /*defino las constantes para el area de botones y cada boton y este espacio lo voy a modificar
 para que cifre y decifre en una sola pagina*/
-const buttons = document.getElementById('buttons');
-const cipherButton = document.getElementById('cipherButton');
-const decipherButton = document.getElementById('decipherButton');
+const buttons = document.getElementById("buttons");
+const cipherButton = document.getElementById("cipherButton");
+const decipherButton = document.getElementById("decipherButton");
 
 /*Aqui creamos un click listener para cifrar y adentro de la funcion que se va a ejecutar al click
 colocamos todos los campos y botones para el cifrado*/
 cipherButton.addEventListener("click", function() {
     //div de offset y su etiqueta
     const offsetField = document.createElement("div");
-    offsetField.setAttribute("class", 'offset-field')
+    offsetField.setAttribute("class", "offset-field")
     const offsetLabel = document.createElement("p");
     offsetLabel.textContent = "FIJA UN VALOR PARA EL CIFRADO";
    //el campo offset es un input type number
@@ -36,13 +36,13 @@ cipherButton.addEventListener("click", function() {
     
     encryptFields.append(msgInput, msgEncrypted);
     //boton para enviaer le mensaje a cifrar
-    const sendButton = document.createElement("button");
-    sendButton.setAttribute("class", "sendCipher");
-    sendButton.setAttribute("id", "sendCipher");
-    sendButton.textContent = "HAZ CLICK PARA CIFRAR"
+    const cipherSendButton = document.createElement("button");
+    cipherSendButton.setAttribute("class", "sendCipher");
+    cipherSendButton.setAttribute("id", "sendCipher");
+    cipherSendButton.textContent = "HAZ CLICK PARA CIFRAR"
     
     
-    buttons.append(offsetField, encryptFields, sendButton);
+    buttons.append(offsetField, encryptFields, cipherSendButton);
 
 });
 
@@ -58,7 +58,7 @@ decipherButton.addEventListener("click", function() {
     const offset = document.createElement("input");
     offset.setAttribute("type", "number")
     offset.setAttribute("placeholder", "clave")
-    offset.setAttribute("id", "offset-encrypt");
+    offset.setAttribute("id", "offset-decode");
     
     offsetField.append(offsetLabel, offset)
     //deberia pornerle un botn de submit?
@@ -76,39 +76,21 @@ decipherButton.addEventListener("click", function() {
     
     encryptFields.append(msgInput, msgEncrypted);
     //boton para enviaer le mensaje a decifrar
-    const sendButton = document.createElement("button");
-    sendButton.setAttribute("class", "sendDecipher");
-    sendButton.setAttribute("id", "sendDecipher");
-    sendButton.textContent = "HAZ CLICK PARA DECIFRAR"
+    const decipherSendButton = document.createElement("button");
+    decipherSendButton.setAttribute("class", "sendDecipher");
+    decipherSendButton.setAttribute("id", "sendDecipher");
+    decipherSendButton.textContent = "HAZ CLICK PARA DECIFRAR"
     
     
-    buttons.append(offsetField, encryptFields, sendButton);
+    buttons.append(offsetField, encryptFields, decipherSendButton);
 
 });
-
-/*
-cipherButton.addEventListener('click', function(){
-    buttons.innerHTML=`
-    <h1> JajajajajajaMuahaha</h1>
-    <textarea></textarea>
-    <button>cifra el texto</button>
-    `
-})
-*/
-
-/*
-cipherButton.addEventListener('click', function(){
-   const textarea=document.createElement('textarea')
-   const button=document.createElement('button')
-   button.textContent="Haz click para cifrar"
-
-   buttons.append(
-    textarea,button
-   )
-})
-*/
-
-/*cipherButton.addEventListener('click', function(){
-    console.log(cipher.ejemplo())
-})
-*/
+//Todo este fragmento es para la funcionalidad de cifrar
+//click listener para capturar str y offset
+const encodeButton = document.getElementById("sendCipher");
+encodeButton.addEventListener("click", function() {
+    let str = document.getElementById("msg-input").value;
+    let offset = document.getElementById("offset-encrypt").value;
+    console.log (str);
+    console.log (offset);
+});
