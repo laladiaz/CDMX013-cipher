@@ -1,5 +1,6 @@
 const cipher = {
-  encode(msgToCipher, offsetCipher) {
+  encode: function (msgToCipher, offsetCipher) {
+    //defino una variable donde guardar las letras 
     let msgEncrypted = "";
     for (let i = 0; i < msgToCipher.length; i++) {
       let letter = msgToCipher[i]
