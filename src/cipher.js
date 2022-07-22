@@ -1,11 +1,11 @@
 const cipher = {
-  encode(msgToCipher, offsetCipher) {
+  encode(str, offset) {
     let msgEncrypted = "";
-    for (let i = 0; i < msgToCipher.length; i++) {
-      let letter = msgToCipher[i]
-      let x = msgToCipher.charCodeAt(i)
+    for (let i = 0; i < str.length; i++) {
+      let letter = str[i]
+      let x = letter.charCodeAt(i)
       if ((x >= 65) && (x <= 90)) {
-        String.fromCharCode(((x - 65 + offsetCipher) % 26) + 65);
+        String.fromCharCode(((x - 65 + offset) % 26) + 65);
       }
       msgEncrypted += letter;
     }
