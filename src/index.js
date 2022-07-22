@@ -1,4 +1,5 @@
 import cipher from './cipher.js';
+
 // llamo a mis textareas y boton para cipher y las pongo como variables
 let cipherForm =document.getElementById("cipherForm");
 let sendCipher = document.getElementById("sendCipher");
@@ -38,5 +39,4 @@ startEncryption();
 
 cipherForm.addEventListener("submit", function(e) {
     
-})
-
+});
