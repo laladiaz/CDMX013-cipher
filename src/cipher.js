@@ -1,8 +1,8 @@
 const cipher = {
-  encode(str, offset) {
+  encode(string, offset) {
     let msgEncrypted = "";
-    for (let i = 0; i < str.length; i++) {
-      let letter = str[i]
+    for (let i = 0; i < string.length; i++) {
+      let letter = string[i]
       let x = letter.charCodeAt(i)
       if ((x >= 65) && (x <= 90)) {
         String.fromCharCode(((x - 65 + offset) % 26) + 65);
