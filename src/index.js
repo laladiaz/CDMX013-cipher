@@ -98,6 +98,12 @@ colocamos todos los campos y botones para el decifrado*/
 decipherButton.addEventListener("click", function () {
     buttons.append(decodeForm);
 });
+function x() {
+    return "soy un mensaje de x"
+};
+decipherSendButton.addEventListener("click", function() {
+    console.log(x())
+});
 
 //Todo este fragmento es para la funcionalidad de cifrar
 //click listener para capturar str y offset
