@@ -1,14 +1,13 @@
 import cipher from './cipher.js';
 
 // llamo a mis textareas y boton para cipher y las pongo como variables
-let cipherForm =document.getElementById("cipherForm");
-let sendCipher = document.getElementById("sendCipher");
-let offsetCipher = document.getElementById("offset-encrypt");
-let encrypted = document.getElementById("encrypted");
-let msgInput = document.getElementById("msgInput");
+const cipherForm =document.getElementById("cipherForm");
+const offsetCipher = document.getElementById("offset-encrypt");
+const encrypted = document.getElementById("encrypted");
+const msgInput = document.getElementById("msgInput");
 
 /*let originalMessage = msgInput.value;
-offsetCipher.addEventListener("input", numberEntered, false);*//*
+offsetCipher.addEventListener("input", numberEntered, false);*/
 
 msgInput.addEventListener("input", characterEntered, false);
 function characterEntered(e) {
@@ -20,10 +19,10 @@ function characterEntered(e) {
 
     //startEncryption();
 };
-function numberEntered(e) {
+/*function numberEntered(e) {
     startEncryption();
 };*/
-
+let originalMessage = msgInput.value
 function startEncryption() {
     //creamos un string vacio para guardar el mensaje codificado
     let encryptedMessage = "";
@@ -39,8 +38,5 @@ function startEncryption() {
 
 cipherForm.addEventListener("submit", function(e) {
     e.preventDefault();
-});
-
-sendCipher.addEventListener("click", function() {
     startEncryption();
-})
+});
