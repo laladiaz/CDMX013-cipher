@@ -95,28 +95,5 @@ decodeForm.addEventListener("submit", function(e) {
     e.preventDefault()
 });
 
-/*Aqui creamos un click listener para el boton de cifrar y adentro de la funcion que se va a 
-ejecutar al click colocamos todos los campos y botones para el cifrado*/
-cipherButton.addEventListener("click", function () {
-    buttons.append(cipherForm);
-});
-
-
-/*Aqui creamos un click listener para decifrar y adentro de la funcion que se va a ejecutar al click
-colocamos todos los campos y botones para el decifrado*/
-decipherButton.addEventListener("click", function () {
-    buttons.append(decodeForm);
-});
-function x() {
-    return "soy un mensaje de x"
-};
-decipherSendButton.addEventListener("click", function() {
-    console.log(x())
-});
-
-//Todo este fragmento es para la funcionalidad de cifrar
-//click listener para capturar str y offset
-//cipherSendButton.addEventListener("click", encodeMessage());
-//cipherSendButton.addEventListener("click", decodeMessage());
 
 
