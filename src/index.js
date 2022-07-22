@@ -86,6 +86,15 @@ decipherSendButton.textContent = "HAZ CLICK PARA DECIFRAR"
 
 decodeForm.append(offsetFieldDecode, encryptFieldsDecode, decipherSendButton)
 
+// para que el form no resetee la pagina
+cipherButton.addEventListener("submit",function(e) {
+    e.preventDefault()
+});
+
+decodeForm.addEventListener("submit", function(e) {
+    e.preventDefault()
+});
+
 /*Aqui creamos un click listener para el boton de cifrar y adentro de la funcion que se va a 
 ejecutar al click colocamos todos los campos y botones para el cifrado*/
 cipherButton.addEventListener("click", function () {
