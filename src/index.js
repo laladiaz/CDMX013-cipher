@@ -7,8 +7,8 @@ let offsetCipher = document.getElementById("offset-encrypt");
 let encrypted = document.getElementById("encrypted");
 let msgInput = document.getElementById("msgInput");
 
-let originalMessage = msgInput.value;
-offsetCipher.addEventListener("input", numberEntered, false);
+/*let originalMessage = msgInput.value;
+offsetCipher.addEventListener("input", numberEntered, false);*//*
 
 msgInput.addEventListener("input", characterEntered, false);
 function characterEntered(e) {
@@ -18,11 +18,11 @@ function characterEntered(e) {
 
     e.target.value = originalMessage;
 
-    startEncryption();
+    //startEncryption();
 };
 function numberEntered(e) {
     startEncryption();
-};
+};*/
 
 function startEncryption() {
     //creamos un string vacio para guardar el mensaje codificado
@@ -35,8 +35,12 @@ function startEncryption() {
     console.log(encryptedMessage);
     encrypted.value = encryptedMessage;
 };
-startEncryption();
+//startEncryption();
 
 cipherForm.addEventListener("submit", function(e) {
-    
+    e.preventDefault();
 });
+
+sendCipher.addEventListener("click", function() {
+    startEncryption();
+})
