@@ -1,45 +1,42 @@
-//import cipher from './cipher.js';
+import cipher from './cipher.js';
 // llamo a mis textareas y boton para cipher y las pongo como variables
+let cipherForm =document.getElementById("cipherForm");
 let sendCipher = document.getElementById("sendCipher");
-let offsetCipher = document.getElementById("offset-encrypt").value;
+let offsetCipher = document.getElementById("offset-encrypt");
 let encrypted = document.getElementById("encrypted");
-let originalMessage = document.getElementById("msgInput").value
+let msgInput = document.getElementById("msgInput");
 
-//agrego un click listener para el boton click para cifrar
-/*sendCipher.addEventListener("click", function() {
-    encrypted.value = encode(msgToCipher, offsetCipher);
-});*/
+let originalMessage = msgInput.value;
+offsetCipher.addEventListener("input", numberEntered, false);
 
+msgInput.addEventListener("input", characterEntered, false);
+function characterEntered(e) {
+    originalMessage = e.target.value;
+    originalMessage = originalMessage.toLowerCase();
+    originalMessage = originalMessage.replace(/[^a-z]/, "");
 
+    e.target.value = originalMessage;
 
-//aqui escribo la funcion donde aplico cipher.encode()
-/*function msgEncrypted() {
-    
-};*/
-
-
+    startEncryption();
+};
+function numberEntered(e) {
+    startEncryption();
+};
 
 function startEncryption() {
     //creamos un string vacio para guardar el mensaje codificado
     let encryptedMessage = "";
-    let shift = 1;
+    let shift = offsetCipher.value;
     //el for.. of loop  va a guardar en la variable letter un array de las letras del mensaje original
     for (let letter of originalMessage) {
-        encryptedMessage += shiftLetter(letter, shift);
+        encryptedMessage += cipher.encode(letter, shift);
     }
     console.log(encryptedMessage);
+    encrypted.value = encryptedMessage;
 };
 startEncryption();
-function shiftLetter(letter, shift) {
-    let newLetter = "";
-    let letterCode = letter.charCodeAt(0);
-    let newLetterCode = letterCode + shift;
-    if (newLetterCode <97) {
-        newLetterCode += 26;
-    } else if (newLetterCode >122) {
-        newLetterCode -= 26;
-    }
-    newLetter = String.fromCharCode(newLetterCode);
-    return newLetter;
+
+cipherForm.addEventListener("submit", function(e) {
     
-};
+})
+

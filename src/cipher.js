@@ -1,17 +1,16 @@
 const cipher = {
-  encode: function (msgToCipher, offsetCipher) {
-    //defino una variable donde guardar las letras 
-    let msgEncrypted = "";
-    for (let i = 0; i < msgToCipher.length; i++) {
-      let letter = msgToCipher[i]
-      let x = msgToCipher.charCodeAt(i)
-      if ((x >= 65) && (x <= 90)) {
-        String.fromCharCode(((x - 65 + offsetCipher) % 26) + 65);
-      }
-      msgEncrypted += letter;
+  encode: function (letter, shift) {
+    let newLetter = "";
+    let letterCode = letter.charCodeAt(0);
+    let newLetterCode = letterCode + (shift%26);
+    if (newLetterCode <97) {
+        newLetterCode += 26;
+    } else if (newLetterCode >122) {
+        newLetterCode -= 26;
     }
-    return msgEncrypted;
-  },
+    newLetter = String.fromCharCode(newLetterCode);
+    return newLetter;
+},
 };
 
 export default cipher;
