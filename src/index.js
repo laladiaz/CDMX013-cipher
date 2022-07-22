@@ -12,13 +12,14 @@ offsetCipher.addEventListener("input", numberEntered, false);*/
 msgInput.addEventListener("input", characterEntered, false);
 function characterEntered(e) {
     originalMessage = e.target.value;
-    originalMessage = originalMessage.toLowerCase();
-    originalMessage = originalMessage.replace(/[^a-z]/, "");
+    //originalMessage = originalMessage.toLowerCase();
+    originalMessage = originalMessage.replace(/[^A-Z]/, "");
 
     e.target.value = originalMessage;
 
     //startEncryption();
-};
+}
+
 /*function numberEntered(e) {
     startEncryption();
 };*/
@@ -31,9 +32,10 @@ function startEncryption() {
     for (let letter of originalMessage) {
         encryptedMessage += cipher.encode(letter, shift);
     }
-    console.log(encryptedMessage);
+    //console.log(encryptedMessage);
     encrypted.value = encryptedMessage;
-};
+}
+
 //startEncryption();
 
 cipherForm.addEventListener("submit", function(e) {
