@@ -10,7 +10,8 @@ cipherForm.addEventListener("submit", function (e) {
     e.preventDefault()
 });
 cipherForm.addEventListener("submit", function () {
-    encrypted.value = cipher.encode(offsetCipher.value, msgInput.value);
+    let shiftEncode = parseInt(offsetCipher.value);
+    encrypted.value = cipher.encode(shiftEncode, msgInput.value);
 });
 
 //DESCIFRAR
@@ -24,5 +25,6 @@ decodeForm.addEventListener("submit", function (e) {
     e.preventDefault()
 });
 decodeForm.addEventListener("submit", function () {
-    msgDecoded.value = cipher.decode(offsetDecode.value, msgInputDecode.value)
+    let shiftDecode = parseInt(offsetDecode.value);
+    msgDecoded.value = cipher.decode(shiftDecode, msgInputDecode.value);
 });
