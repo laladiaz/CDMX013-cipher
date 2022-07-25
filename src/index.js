@@ -1,4 +1,4 @@
-import cipher from './cipher.js';
+//import cipher from './cipher.js';
 //CIFRAR:
 // llamo a mis textareas y boton para cipher y las pongo como variables
 const cipherForm = document.getElementById("cipherForm");
@@ -11,12 +11,25 @@ const msgInput = document.getElementById("msgInput");
 /*msgInput.addEventListener("input", function (e) {
     originalMessage = e.target.value;
 });*/
-
+function encode (offset, string) {
+    //let offset = paseInt(offsetCipher.value);
+    let encryptedMessage = "";
+    for (let i=0; i<string.legth; i++) {
+      let letterCode = string.charCodeAt(i)
+        if ((letterCode>=65) &&(letterCode<=90)) {
+          var newLetterCode = ((letterCode - 65 + offset) % 26 + 65);
+          let newLetter = String.fromCharCode(newLetterCode);
+          encryptedMessage += newLetter
+          return encryptedMessage;
+        }
+      }
+      
+  }
 
 function startEncryption() {
     let originalMessage = msgInput.value
     let offsetEncode = parseInt(offsetCipher.value);
-    encrypted.value = cipher.encode(offsetEncode, originalMessage);
+    encrypted.value = encode(offsetEncode, originalMessage);
 }
 
 cipherForm.addEventListener("submit", function (e) {
