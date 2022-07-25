@@ -6,9 +6,9 @@ const cipher = {
       let letterCode = string.charCodeAt(i)
         if ((letterCode>=65) &&(letterCode<=90)) {
           var newLetterCode = ((letterCode - 65 + offset) % 26 + 65);
-          let newLetter = String.fromCharCode(newLetterCode);
-          encryptedMessage += newLetter
+          var newLetter = String.fromCharCode(newLetterCode);
         }
+        encryptedMessage += newLetter
       }
       return encryptedMessage;
   },
