@@ -1,21 +1,21 @@
 const cipher = {
-  encode: function (letter, offset) {
+  encode: function (string, offset) {
     let newLetter = "";
-    let letterCode = letter.charCodeAt(0);
+    let letterCode = string.charCodeAt(0);
     if ((letterCode >= 65) && (letterCode <= 90)) {
-      var newLetterCode = (letterCode - 65) + offset % 26 + 65;
+      var newLetterCode = ((letterCode - 65) + offset % 26 + 65);
     }
     newLetter = String.fromCharCode(newLetterCode);
     return newLetter;
   },
-  decode: function (letter, offset) {
-    let newLetter = "";
-    let letterCode = letter.charCodeAt(0);
+  decode: function (string, offset) {
+    let decodedLetter = "";
+    let letterCode = string.charCodeAt(0);
     if ((letterCode >= 65) && (letterCode <= 90)) {
-      var newLetterCode = (letterCode + 65) - offset % 26 + 65;
+      var newLetterCode = ((letterCode + 65 - offset) % 26 + 65);
     }
-    newLetter = String.fromCharCode(newLetterCode);
-    return newLetter;
+    decodedLetter = String.fromCharCode(newLetterCode);
+    return decodedLetter;
   },
 };
 
