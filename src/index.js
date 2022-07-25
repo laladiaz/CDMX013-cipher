@@ -47,6 +47,10 @@ cipherSendButton.textContent = "HAZ CLICK PARA CIFRAR";
 
 cipherForm.append(offsetFieldCipher, encryptFieldsCipher, cipherSendButton);
 
+cipherButton.addEventListener("click", function(){
+    return cipherForm
+})
+
 //DESCIFRAR
 
 const decodeForm = document.createElement("form")
@@ -86,14 +90,16 @@ decipherSendButton.textContent = "HAZ CLICK PARA DECIFRAR"
 
 decodeForm.append(offsetFieldDecode, encryptFieldsDecode, decipherSendButton)
 
-// para que el form no resetee la pagina
-cipherForm.addEventListener("submit",function(e) {
+// imprimir encode y decode en el DOM
+/*let originalMessage = msgInputCipher.value;
+let offsetEncode = offsetCipher.value;*/
+
+
+/*cipherForm.addEventListener("submit",function(e) {
     e.preventDefault()
+   // cipher.encode(originalMessage,offsetEncode)
 });
 
 decodeForm.addEventListener("submit", function(e) {
     e.preventDefault()
-});
-
-
-
+});*/

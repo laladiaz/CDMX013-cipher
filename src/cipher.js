@@ -5,7 +5,7 @@ const cipher = {
       let letter = string[i]
       let x = letter.charCodeAt(i)
       if ((x >= 65) && (x <= 90)) {
-        String.fromCharCode(((x - 65) + offset % 26) + 65);
+        String.fromCharCode(((x - 65 + offset) % 26) + 65);
       }
       msgEncrypted += letter;
     }
