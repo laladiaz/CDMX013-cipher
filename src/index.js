@@ -7,27 +7,21 @@ const encrypted = document.getElementById("encrypted");
 const msgInput = document.getElementById("msgInput");
 
 // este fragmento le pide al codigo que escuche el input en la ventana y 
-let originalMessage = msgInput.value
-msgInput.addEventListener("input", function(e) {
+//let originalMessage = msgInput.value
+msgInput.addEventListener("input", function (e) {
     originalMessage = e.target.value;
-    originalMessage = originalMessage.replace(/[^A-Z]/, "");
+    //originalMessage = originalMessage.replace(/[^A-Z]/, "");
 
-    e.target.value = originalMessage;
+    //e.target.value = originalMessage;
 });
 
 function startEncryption() {
-    //creamos un string vacio para guardar el mensaje codificado
-    let encryptedMessage = "";
-    let offsetEncode = offsetCipher.value;
-    //el for.. of loop  va a guardar en la variable letter un array de las letras del mensaje original
-    for (let letter of originalMessage) {
-        encryptedMessage += cipher.encode(letter, offsetEncode);
-    }
-    //console.log(encryptedMessage);
-    encrypted.value = encryptedMessage;
+    let originalMessage = msgInput.value
+    let offsetEncode = offsetCipher.value
+    encrypted.value = cipher.encode(offsetEncode, originalMessage);
 }
 
-cipherForm.addEventListener("submit", function(e) {
+cipherForm.addEventListener("submit", function (e) {
     e.preventDefault();
     startEncryption();
 });
@@ -37,11 +31,11 @@ cipherForm.addEventListener("submit", function(e) {
 const decodeForm = document.getElementById("decodeForm");
 const offsetDecode = document.getElementById("offset-decode");
 const msgInputDecode = document.getElementById("msgCode");
-const msgDecoded = document.getElementById ("decoded");
+const msgDecoded = document.getElementById("decoded");
 
 // este fragmento le pide al codigo que escuche el input en la ventana y 
 let encodeMessage = msgInputDecode.value
-msgInputDecode.addEventListener("input", function(e) {
+msgInputDecode.addEventListener("input", function (e) {
     encodeMessage = e.target.value;
     encodeMessage = encodeMessage.replace(/[^A-Z]/, "");
 
@@ -51,16 +45,16 @@ msgInputDecode.addEventListener("input", function(e) {
 function startDecode() {
     //creamos un string vacio para guardar el mensaje codificado
     let decodedMessage = "";
-    let shift = offsetDecode.value;
+    let shift = parseInt(offsetDecode.value);
     //el for.. of loop  va a guardar en la variable letter un array de las letras del mensaje original
     for (let letterShifted of encodeMessage) {
-        decodedMessage += cipher.decode(letterShifted, shift);
+        decodedMessage += cipher.decode(shift, letterShifted);
     }
     //console.log(encryptedMessage);
     msgDecoded.value = decodedMessage;
 }
 
-decodeForm.addEventListener("submit", function(e) {
+decodeForm.addEventListener("submit", function (e) {
     e.preventDefault();
     startDecode();
 });
