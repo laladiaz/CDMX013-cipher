@@ -6,31 +6,22 @@ const offsetCipher = document.getElementById("offset-encrypt");
 const encrypted = document.getElementById("encrypted");
 const msgInput = document.getElementById("msgInput");
 
-/*let originalMessage = msgInput.value;
-offsetCipher.addEventListener("input", numberEntered, false);*/
-
-msgInput.addEventListener("input", characterEntered, false);
-function characterEntered(e) {
+let originalMessage = msgInput.value
+msgInput.addEventListener("input", function(e) {
     originalMessage = e.target.value;
-    //originalMessage = originalMessage.toLowerCase();
     originalMessage = originalMessage.replace(/[^A-Z]/, "");
 
     e.target.value = originalMessage;
+});
 
-    //startEncryption();
-}
 
-/*function numberEntered(e) {
-    startEncryption();
-};*/
-let originalMessage = msgInput.value
 function startEncryption() {
     //creamos un string vacio para guardar el mensaje codificado
     let encryptedMessage = "";
-    let shift = offsetCipher.value;
+    let offsetEncode = offsetCipher.value;
     //el for.. of loop  va a guardar en la variable letter un array de las letras del mensaje original
     for (let letter of originalMessage) {
-        encryptedMessage += cipher.encode(letter, shift);
+        encryptedMessage += cipher.encode(letter, offsetEncode);
     }
     //console.log(encryptedMessage);
     encrypted.value = encryptedMessage;

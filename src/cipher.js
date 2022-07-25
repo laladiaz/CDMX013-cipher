@@ -1,12 +1,9 @@
 const cipher = {
-  encode: function (letter, shift) {
+  encode: function (letter, offset) {
     let newLetter = "";
     let letterCode = letter.charCodeAt(0);
-    let newLetterCode = letterCode + (shift%26);
-    if (newLetterCode <65) {
-        newLetterCode += 26;
-    } else if (newLetterCode >90) {
-        newLetterCode -= 26;
+    if ((letterCode >=65) && (letterCode<=90)) {
+      var newLetterCode = (letterCode - 65) + offset %26 +65;
     }
     newLetter = String.fromCharCode(newLetterCode);
     return newLetter;
