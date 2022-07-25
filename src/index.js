@@ -8,16 +8,14 @@ const msgInput = document.getElementById("msgInput");
 
 // este fragmento le pide al codigo que escuche el input en la ventana y 
 //let originalMessage = msgInput.value
-msgInput.addEventListener("input", function (e) {
+/*msgInput.addEventListener("input", function (e) {
     originalMessage = e.target.value;
-    //originalMessage = originalMessage.replace(/[^A-Z]/, "");
+});*/
 
-    //e.target.value = originalMessage;
-});
 
 function startEncryption() {
     let originalMessage = msgInput.value
-    let offsetEncode = offsetCipher.value
+    let offsetEncode = parseInt(offsetCipher.value);
     encrypted.value = cipher.encode(offsetEncode, originalMessage);
 }
 

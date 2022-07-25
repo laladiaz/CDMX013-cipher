@@ -4,13 +4,13 @@ const cipher = {
     let encryptedMessage = "";
     for (let i=0; i<string.legth; i++) {
       let letterCode = string.charCodeAt(i)
-        if ((letteCoder>=65) &&(letterCode<=90)) {
-          let newLetterCode = ((letterCode - 65 + offset) % 26 + 65);
-          let newLetter = String.fromCharCode(newLetterCode);
-          encryptedMessage += newLetter
+        if ((letterCode>=65) &&(letterCode<=90)) {
+          var newLetterCode = ((letterCode - 65 + offset) % 26 + 65);
         }
-        return encryptedMessage;
+          let newLetter = String.fromCharCode(newLetterCode);
+        encryptedMessage += newLetter
       }
+      return encryptedMessage;
   },
   decode: function (offset, string) {
     let decodedLetter = "";
