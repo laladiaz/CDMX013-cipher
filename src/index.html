@@ -33,15 +33,18 @@
         </div>
         <button type="submit" class="sendCipher" id="sendCipher">HAZ CLICK PARA CIFRAR</button>
       </form>
-      <div class="offset-field">
-        <p>FIJAR UN VALOR PARA EL CIFRADO</p>
-        <input type="number" placeholder="clave" id="offset-decodet">
-      </div>
-      <div class="fields">
-        <textarea id="msgCode" placeholder="ESCRIBE TU MENSAJE EN MAYUSCULAS SIN USAR CARACTERES ESPECIALES"></textarea>
-        <textarea id="decoded" readonly></textarea>
-      </div>
-      <button class="sendDecipher" id="sendDecipher">HAZ CLICK PARA CIFRAR</button>
+      <form id="decodeForm" autocomplete="off">
+        <div class="offset-field">
+          <p>FIJAR UN VALOR PARA EL CIFRADO</p>
+          <input type="number" placeholder="clave" id="offset-decodet">
+        </div>
+        <div class="fields">
+          <textarea id="msgCode"
+            placeholder="ESCRIBE TU MENSAJE EN MAYUSCULAS SIN USAR CARACTERES ESPECIALES"></textarea>
+          <textarea id="decoded" readonly></textarea>
+        </div>
+        <button class="sendDecipher" id="sendDecipher">HAZ CLICK PARA CIFRAR</button>
+      </form>
     </main>
   </div>
   <footer class="main-footer">

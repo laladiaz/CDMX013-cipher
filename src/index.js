@@ -1,11 +1,11 @@
 import cipher from './cipher.js';
-
+//CIFRAR:
 // llamo a mis textareas y boton para cipher y las pongo como variables
 const cipherForm =document.getElementById("cipherForm");
 const offsetCipher = document.getElementById("offset-encrypt");
 const encrypted = document.getElementById("encrypted");
 const msgInput = document.getElementById("msgInput");
-
+// este fragmento le pide al codigo que escuche el input en la ventana y 
 let originalMessage = msgInput.value
 msgInput.addEventListener("input", function(e) {
     originalMessage = e.target.value;
@@ -13,7 +13,6 @@ msgInput.addEventListener("input", function(e) {
 
     e.target.value = originalMessage;
 });
-
 
 function startEncryption() {
     //creamos un string vacio para guardar el mensaje codificado
@@ -27,9 +26,10 @@ function startEncryption() {
     encrypted.value = encryptedMessage;
 }
 
-//startEncryption();
-
 cipherForm.addEventListener("submit", function(e) {
     e.preventDefault();
     startEncryption();
 });
+
+//DESCIFRAR
+// llamo a mis textareas y boton para cipher y las pongo como variables
