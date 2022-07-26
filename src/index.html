@@ -24,7 +24,7 @@
       <form id="cipherForm" autocomplete="off">
         <div class="offset-field">
           <p>FIJAR UN VALOR PARA EL CIFRADO</p>
-          <input type="number" placeholder="clave" id="offset-encrypt">
+          <input type="number" placeholder="clave" id="offset-encrypt" min="1" max="1000">
         </div>
         <div class="fields">
           <textarea id="msgInput"
@@ -36,7 +36,7 @@
       <form id="decodeForm" autocomplete="off">
         <div class="offset-field">
           <p>FIJAR UN VALOR PARA EL CIFRADO</p>
-          <input type="number" placeholder="clave" id="offset-decode">
+          <input type="number" placeholder="clave" id="offset-decode" min="1" max="1000">
         </div>
         <div class="fields">
           <textarea id="msgCode"
