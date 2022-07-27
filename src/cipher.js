@@ -10,6 +10,8 @@ const cipher = {
         var newLetterCode = ((letterCode - 65 + offset) % 26 + 65);
       } else if ((letterCode >= 97) && (letterCode <=122)) {
         newLetterCode = ((letterCode -97 +offset) % 26 + 97);
+      } else {
+        newLetterCode = letterCode;
       }
       let newLetter = String.fromCharCode(newLetterCode);
       encryptedMessage += newLetter;
