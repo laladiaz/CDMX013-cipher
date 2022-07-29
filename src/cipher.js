@@ -5,9 +5,12 @@ const cipher = {
     }
     let encryptedMessage = "";
     for (let i = 0; i < string.length; i++) {
+
       let letterCode = string.charCodeAt(i);
+      let newLetterCode = 0
+      
       if ((letterCode >= 65) && (letterCode <= 90)) {
-        var newLetterCode = ((letterCode - 65 + offset) % 26 + 65);
+        newLetterCode = ((letterCode - 65 + offset) % 26 + 65);
       } else if ((letterCode >= 97) && (letterCode <=122)) {
         newLetterCode = ((letterCode - 97 + offset) % 26 + 97);
       } else {
