@@ -31,7 +31,7 @@ encryptFieldsCipher.setAttribute("class", "fields");
 //textarea para introducir el mensaje a cifrar
 const msgInputCipher = document.createElement("textarea");
 msgInputCipher.setAttribute("id", "msgInput");
-msgInputCipher.setAttribute("placeholder", "ESCRIBE TU MENSAJE EN MAYUSCULAS SIN USAR CARACTERES ESPECIALES");
+msgInputCipher.setAttribute("placeholder", "ESCRIBE TU MENSAJE PARA CIFRAR");
 //textarea para leer unicamente el mensaje cifrado
 const msgEncrypted = document.createElement("textarea");
 msgEncrypted.setAttribute("id", "encrypted");
@@ -69,7 +69,7 @@ decodeForm.setAttribute("autocomplete", "off")
 const offsetFieldDecode = document.createElement("div");
 offsetFieldDecode.setAttribute("class", 'offset-field')
 const offsetLabelDecode = document.createElement("p");
-offsetLabelDecode.textContent = "FIJA UN VALOR PARA EL CIFRADO";
+offsetLabelDecode.textContent = "INTRODUCE EL VALOR PARA EL DECIFRADO";
 //el campo offset para descifrar es un input type number
 const offsetDecode = document.createElement("input");
 offsetDecode.setAttribute("type", "number")
@@ -84,7 +84,7 @@ encryptFieldsDecode.setAttribute("class", "fields");
 //textarea para introducir el mensaje a descifrar
 const msgInputDecode = document.createElement("textarea");
 msgInputDecode.setAttribute("id", "msgCode");
-msgInputDecode.setAttribute("placeholder", "ESCRIBE TU MENSAJE EN MAYUSCULAS SIN USAR CARACTERES ESPECIALES");
+msgInputDecode.setAttribute("placeholder", "ESCRIBE TU MENSAJE PARA DECIFRAR");
 //textarea para leer unicamente el mensaje descifrardo
 const msgDecoded = document.createElement("textarea");
 msgDecoded.setAttribute("id", "decoded");
