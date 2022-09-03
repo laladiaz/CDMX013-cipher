@@ -1,10 +1,11 @@
 import cipher from './cipher.js';
+
 // todo este fragmento es para agregar al DOM textareas y buttons para cifrar y descifar
 // defino las constantes para el area de botones y los botones de cifrar y descifrar 
 
-const buttons = document.getElementById("buttons");
 const cipherButton = document.getElementById("cipherButton");
 const decipherButton = document.getElementById("decipherButton");
+const codeDecode = document.getElementById('code-decode');
 // creo campos y botones necesarios para la UX
 //CIFRAR
 const cipherForm = document.createElement("form")
@@ -47,8 +48,10 @@ cipherSendButton.textContent = "HAZ CLICK PARA CIFRAR";
 
 cipherForm.append(offsetFieldCipher, encryptFieldsCipher, cipherSendButton);
 
+
 cipherButton.addEventListener("click", function(){
-    return cipherForm
+    codeDecode.innerHTML="";
+    codeDecode.appendChild(cipherForm);
 })
 
 //DESCIFRAR
@@ -89,6 +92,11 @@ decipherSendButton.setAttribute("id", "sendDecipher");
 decipherSendButton.textContent = "HAZ CLICK PARA DECIFRAR"
 
 decodeForm.append(offsetFieldDecode, encryptFieldsDecode, decipherSendButton)
+
+decipherButton.addEventListener("click", function(){
+    codeDecode.innerHTML="";
+    codeDecode.appendChild(decodeForm);
+})
 
 // imprimir encode y decode en el DOM
 /*let originalMessage = msgInputCipher.value;
