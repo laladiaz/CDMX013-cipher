@@ -22,6 +22,7 @@ const offsetCipher = document.createElement("input");
 offsetCipher.setAttribute("type", "number")
 offsetCipher.setAttribute("placeholder", "clave")
 offsetCipher.setAttribute("id", "offset-encrypt");
+offsetCipher.setAttribute('min', '0');
 
 offsetFieldCipher.append(offsetLabelCipher, offsetCipher)
 
@@ -75,6 +76,7 @@ const offsetDecode = document.createElement("input");
 offsetDecode.setAttribute("type", "number")
 offsetDecode.setAttribute("placeholder", "clave")
 offsetDecode.setAttribute("id", "offset-decode");
+offsetDecode.setAttribute('min', '0');
 
 offsetFieldDecode.append(offsetLabelDecode, offsetDecode)
 
