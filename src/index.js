@@ -54,6 +54,12 @@ cipherButton.addEventListener("click", function(){
     codeDecode.appendChild(cipherForm);
 })
 
+cipherForm.addEventListener('submit', (e)=>{
+    e.preventDefault();
+    let shiftEncode = parseInt(offsetCipher.value);
+    msgEncrypted.value = cipher.encode(shiftEncode, msgInputCipher.value);
+})
+
 //DESCIFRAR
 
 const decodeForm = document.createElement("form")
@@ -98,16 +104,8 @@ decipherButton.addEventListener("click", function(){
     codeDecode.appendChild(decodeForm);
 })
 
-// imprimir encode y decode en el DOM
-/*let originalMessage = msgInputCipher.value;
-let offsetEncode = offsetCipher.value;*/
-
-
-/*cipherForm.addEventListener("submit",function(e) {
-    e.preventDefault()
-   // cipher.encode(originalMessage,offsetEncode)
-});
-
-decodeForm.addEventListener("submit", function(e) {
-    e.preventDefault()
-});*/
+decodeForm.addEventListener('submit', (e)=>{
+    e.preventDefault();
+    let shiftDencode = parseInt(offsetDecode.value);
+    msgDecoded.value = cipher.decode(shiftDencode, msgInputDecode.value);
+})
