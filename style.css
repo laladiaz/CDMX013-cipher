@@ -1,0 +1,162 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* formato de toda la pagina html */
+html {
+  background: #EFE9E7;
+  padding: 1px 1px;
+  margin: auto;
+  font-size: 14px;
+}
+.body{
+    margin-bottom: 4rem;
+    min-height: 81.3vh;
+}
+/*en la etiqueta header esta incluido el titulo y el logo */
+header {
+    text-align: center;
+    padding: 0.7rem 5%;
+}
+.name {
+    color: goldenrod;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 56px;
+}
+
+/*Aqui esta el formato de welcome y los botones estan incluidos en la etiqueta main
+que se ejecuta antes de comenzar a usar las funcionalidades*/
+
+
+#welcome {
+font-family: Arial, Helvetica, sans-serif;
+text-align: justify;
+font-size: 12px;
+padding-left: 15%;
+margin-top: 5%;
+
+}
+#cipherButton, #decipherButton {
+    border: none;
+    color: white;
+    width: 15%;
+    padding: 2.28rem 1.14rem;
+    margin: auto;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-top: 15%;
+    
+    
+}
+
+#cipherButton:hover, #decipherButton:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.532), 0 17px 50px 0 rgba(0, 0, 0, 0.301);
+    transition-duration: 0.4ms;
+}
+#cipherButton {
+    background-color: #C6757D; /* rose */
+    margin-left: 35%;
+}
+
+#decipherButton {
+    background-color: #739E82; /* Russian Green */
+}
+/*Estilo del pie de pagina*/
+
+footer {
+    background-color: #0A1045;
+    padding:2rem 0 2rem 0; 
+    width: 100%;
+    height: 12.5vh;
+    background-color: #0A1045;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    bottom: 0;
+}
+.copyright, .privacy {
+    color: white;
+}
+
+/*Estilo de main cuando se activa cipherButton*/
+.offset-field{
+    padding: 2rem;
+}
+.fields {
+    text-align: center;
+}
+#offset-encrypt, #offset-decode {
+    display: inline-block;
+    width: 4.64rem;
+    height: 1.78rem;
+    border-radius: 4px;
+    border: 1px solid #0A1045;
+    padding-left: 0.5rem;   
+}
+#msgInput, #encrypted {
+    display: inline-block;
+    border: 2px solid #C6757D;
+    border-radius: 4px;
+    width: 35rem;
+    height: 20rem;
+}
+#encrypted {
+background-color: #C6757D;
+margin-left: 1rem;
+}
+.sendCipher {
+    width: 10.71rem;
+    height: 5rem;
+    border-radius: 6px;
+    color: #EFE9E7;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #C6757D;
+    margin: 2rem 45%;
+    padding: 0 1rem 0 1rem;
+}
+.sendCipher:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.532), 0 17px 50px 0 rgba(0, 0, 0, 0.301);
+    transition-duration: 0.4ms;
+}
+/*Estilo de main cuando se activa decipherButton*/
+#msgCode, #decoded {
+    display: inline-block;
+    border: 2px solid #739E82;
+    border-radius: 4px;
+    width: 35rem;
+    height: 20rem;
+}
+#decoded {
+background-color: #739E82;
+margin-left: 1rem;
+}
+.sendDecipher {
+    width: 10.71rem;
+    height: 5rem;
+    border-radius: 6px;
+    color: #EFE9E7;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #739E82;
+    margin: 2rem 45%;
+}
+.sendDecipher:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.532), 0 17px 50px 0 rgba(0, 0, 0, 0.301);
+    transition-duration: 0.4ms;
+}
+p {
+    font-size: 16px;
+    padding: 0.2rem;
+    color:#0A1045;
+
+}
