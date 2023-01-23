@@ -26,10 +26,11 @@ const cipher = {
       throw new TypeError ("Ingresa valores");
     }
     let decodedMessage = "";
+    let newLtCode = 0;
     for (let i = 0; i < string.length; i++) {
       let letter = string.charCodeAt(i);
       if ((letter >= 65) && (letter <= 90)) {
-        var newLtCode = ((letter + 65 - offset) % 26 + 65);
+        newLtCode = ((letter + 65 - offset) % 26 + 65);
       } else if ((letter >= 97) && (letter <=122)) {
         newLtCode = ((letter - 122 - offset) % 26 + 122);
       } else {
