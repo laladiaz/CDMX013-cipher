@@ -12,7 +12,7 @@ html {
 }
 .body{
     margin-bottom: 4rem;
-    min-height: fit-content;
+    min-height: 81.3vh;
 }
 /*en la etiqueta header esta incluido el titulo y el logo */
 header {
@@ -34,6 +34,7 @@ font-family: Arial, Helvetica, sans-serif;
 text-align: justify;
 font-size: 12px;
 padding-left: 15%;
+margin-top: 5%;
 
 }
 #cipherButton, #decipherButton {
@@ -48,7 +49,7 @@ padding-left: 15%;
     font-size: 16px;
     border-radius: 8px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    margin-top: 3.5rem;
+    margin-top: 15%;
     
     
 }
@@ -119,6 +120,7 @@ margin-left: 1rem;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: #C6757D;
     margin: 2rem 45%;
+    padding: 0 1rem 0 1rem;
 }
 .sendCipher:hover {
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.532), 0 17px 50px 0 rgba(0, 0, 0, 0.301);
