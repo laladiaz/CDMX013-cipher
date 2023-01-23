@@ -1,45 +1,34 @@
 README proyecto 1 Cipher: Secret Lines
 
-# Incluye info sobre proceso y decisiones de diseño.
+# Secret Lines website
+not responsive.
 
-Para comnezar el proceso y tomar las decisiones del diseño, comencé con una
-tormenta de ideas usando lápiz y papel. En esta tormenta de ideas primero me 
-imaginé como seria la página más simple con todos los requisitos especificados 
-en el README del proyecto. Aquí dibujé una sola pantalla de computadora con 
-un campo para mensaje (input), una campo para offset, un boton de enter y
-un campo de lectura (output).
+## The Website.
 
-Una vez que definí a que tipo de usuario estaría orientado, pensé en un nombre
-para la página, creé un logo, y escogí una paleta de colores teniendo en mente
-rojo (o algun matiz de rojo) para codificación, vere (o algun matiz de verde 
-para la descodificación), fondo claro y pie de página. Usé la página
-coolors (proporcionada por una compañera de squat) para esto.
+[Secret Lines](https://laladiaz.github.io/CDMX013-cipher/)
 
-Escribí que características quería que tuviera mi página y luego me fui a 
-figma a hacer un prototipo, incluyendo los botones y que quería que hicieran.
+In this website, the users can code and decode messages using Caesar cipher method. For this, a number should be enter in the offset field. This number is the key to decipher the message so is very important to keepit safe somewhere.
 
-Si me da tiempo, me gustaría agregar un ojito para el offset y para el mensaje a codificar/codificado
-en caso que el usuario quisiera mantener la privacidad en el momento y copiar y 
-pegar el mensaje para poder ser leido luego en su procesador de texto de preferencia.
+The Caesar cipher method is not infallible, but can be used to make a game (like a treasor hunt) or to leave personal messages you don't want many people to read easily.
 
-# Explica claramente quiénes son los usuarios y su relación con el producto.
 
-Luego me pregunté que estaría haciendo la persona que hiciera esta página necesaria,
-en otras palabras, que problema estaría solucionando. Después de hacer una lista de
-diferentes perfiles de personas, me imaginé a un periodista enviando la nota de 
-prensa a su editor o equipo de trabajo. Querría que esta estuviese codificada como 
-medida de protección de la información.
+## Designing the website.
 
-# Explica claramente cómo el producto soluciona los problemas/necesidades de los usuarios.
+From the guidelines given, I started drawing a low-fidelity prototype to know the components i would require.
 
-Si quiera pasar una información sensible y ganar tiempo para su publicación o
-simplemente pasar el pitazo de una primicia que sea en corto tiempo, podría usar
-este sistema de codificación. Aunque este sistema de codificación por sustitución
-es muy fácil de descodificar, no se descodifica tan rápido, por lo que podría ganar
-tiempo para realizar la acción deseada.
+![lo-fi prototype](https://drive.google.com/file/d/1_tAPJymPHgCQfxdeOREycvOCBiEmG1CD/view?usp=sharing)
+
+I imagine a one screem website with an input field to enter tex, an output readonly field and a field to enter an offset number. Then, I brainstormed to define the name of the website and what colors should be used for this task. I decided the name was going to be Secret Lines and to use the traffic lights schema for the colors. This, because I thought it would be easier for the user to associate red with code and green with decode. 
+
+After that I made the high fidelity prototype using Figma.
+
+[Figma prototype](https://www.figma.com/file/PsovqQWgpdhrMmRWzcUbYH/Untitled?node-id=0%3A1&t=5jP3Fl8lxgbkUQBe-1)
+
+
 
 URL:  https://laladiaz.github.io/CDMX013-cipher/
 
+Guidelines given:
 
 # Cifrado César
 
