@@ -5,7 +5,7 @@ not responsive.
 
 ## The Website.
 
-[Secret Lines](src/Images/lo-fi%20prot.jpg)
+[Secret Lines](https://laladiaz.github.io/CDMX013-cipher/)
 
 In this website, the users can code and decode messages using Caesar cipher method. For this, a number should be enter in the offset field. This number is the key to decipher the message so is very important to keepit safe somewhere.
 
@@ -16,7 +16,7 @@ The Caesar cipher method is not infallible, but can be used to make a game (like
 
 From the guidelines given, I started drawing a low-fidelity prototype to know the components i would require.
 
-![lo-fi prototype](https://drive.google.com/file/d/1_tAPJymPHgCQfxdeOREycvOCBiEmG1CD/view?usp=sharing)
+![lo-fi prototype](src/Images/lo-fi%20prot.jpg)
 
 I imagine a one screem website with an input field to enter tex, an output readonly field and a field to enter an offset number. Then, I brainstormed to define the name of the website and what colors should be used for this task. I decided the name was going to be Secret Lines and to use the traffic lights schema for the colors. This, because I thought it would be easier for the user to associate red with code and green with decode. 
 
