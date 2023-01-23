@@ -5,7 +5,7 @@ not responsive.
 
 ## The Website.
 
-[Secret Lines](https://laladiaz.github.io/CDMX013-cipher/)
+[Secret Lines](Images/lo-fi prot.jpg)
 
 In this website, the users can code and decode messages using Caesar cipher method. For this, a number should be enter in the offset field. This number is the key to decipher the message so is very important to keepit safe somewhere.
 
