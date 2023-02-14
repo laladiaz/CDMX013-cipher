@@ -1,4 +1,4 @@
-README proyecto 1 Cipher: Secret Lines
+README project 1 Cipher: Secret Lines
 
 # Secret Lines website
 not responsive.
