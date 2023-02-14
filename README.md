@@ -1,7 +1,7 @@
 README project 1 Cipher: Secret Lines
 
 # Secret Lines website
-not responsive.
+not responsive: desktop
 
 ## The Website.
 
