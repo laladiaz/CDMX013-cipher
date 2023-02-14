@@ -1,5 +1,3 @@
-README project 1 Cipher: Secret Lines
-
 # Secret Lines website
 not responsive: desktop
 
@@ -16,7 +14,7 @@ The Caesar cipher method is not infallible, but can be used to make a game (like
 
 From the guidelines given, I started drawing a low-fidelity prototype to know the components i would require.
 
-![lo-fi prototype](src/Images/lo-fi%20prot.jpg)
+<image src="src/Images/lo-fi%20prot.jpg" width=40% height=40%>
 
 I imagine a one screem website with an input field to enter tex, an output readonly field and a field to enter an offset number. Then, I brainstormed to define the name of the website and what colors should be used for this task. I decided the name was going to be Secret Lines and to use the traffic lights schema for the colors. This, because I thought it would be easier for the user to associate red with code and green with decode. 
 
